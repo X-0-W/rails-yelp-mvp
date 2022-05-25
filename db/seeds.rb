@@ -8,8 +8,6 @@
 
 require 'faker'
 
-CATEGORIES = %w[chinese italian japanese french belgian]
-
-5.times do
-  Restaurant.create(name: Faker::Restaurant.name, address: Faker::Address.city, category: CATEGORIES.sample)
+30.times do
+  Review.create(content: Faker::GreekPhilosophers.quote, rating: rand(1..5), restaurant_id: rand(1..5))
 end
